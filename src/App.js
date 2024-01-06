@@ -1,4 +1,3 @@
-import './App.css';
 import Hasher from './Components/Hasher';
 
 function App() {

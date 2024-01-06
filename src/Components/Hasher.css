@@ -3,21 +3,21 @@
     margin: 0;
 }
 .main{
-    margin: 20px auto;
-    width: 800px;
-    background-color: #F7E7FF;
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 15px;
+    border: 2px solid #8a3cff;
+
 }
 h1{
     background-color: transparent;
-    color: #292929
+    color: #333333
 }
-.header{
+.main-header{
     display: flex;
-    align-items: center;
-    margin: 35px ;
-    justify-content: center;
-    background: transparent;
+    justify-content: space-between;
 }
+
  .dropdown{
     max-width: 150px;
     margin: 4px;
@@ -25,7 +25,7 @@ h1{
     cursor: pointer;
     height: 40px;
     outline: 0;
-    background-color: #D28AFF;
+    background-color: #7d45ff;
     color: #ffffff;
     border-radius: 34px;
 }
@@ -35,37 +35,63 @@ h1{
     margin: 12px;
 }
 .main-container{
-
     display: flex;
-    flex-direction: row;
     padding: 23px;
 }
-.container input{
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(236, 236, 236);
+    
+}
+::-webkit-scrollbar-thumb{
+    background-color: #a3a3a3;
+}
+.container textarea{
     outline: 0;
     text-align: start;
-    color: #000000b9;
     font-size: larger;
-    background-color: #E2BDFF;
-    border-radius: 14px;
+    height: 250px;
     border: 0;
     width: 100%;
+    resize: none;
+    color: #fff;
     word-break: break-all;
+    background: none;
 }
 .container{
-    background-color: #E2BDFF;
+    background-color: #7d45ff;
     height: 300px;
     width: 100%;
     border-radius: 14px;
     margin: 12px;
+    color: #ffffff;
     border: 0;
     text-align: start;
     outline: 0;
     padding: 12px;
     word-break: break-all;
 }
-
-.container .icon{
-    left: 0;
-    right: 10px;
-    color: #c260ff;
+@media screen and (max-width:970px) {
+    .main-header{
+        flex-direction: column;
+        width: 100%;
+    }
+    .main{
+        margin: auto;
+        border: none;
+        width: 100%;
+        max-width: none;
+    }
+    .main-container{
+        flex-direction: column;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        height: 200px;
+        width: 250px;
+    }
 }
